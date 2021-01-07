@@ -35,7 +35,7 @@ public class register extends JFrame  {
 				f.setLocation(310, 150);
 				f.setVisible(true);
 				f.setResizable(false);
-				f.setUndecorated(true);
+				//f.setUndecorated(true);
 				f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 				
 			}
@@ -190,7 +190,7 @@ public class register extends JFrame  {
         pane.setBounds(565, 27, 800, 275);
 
         getContentPane().add(pane);
-        Object[] row = new Object[7];
+        Object[] row = new Object[8];
 		 
 
 		btnConfirm.addActionListener(new ActionListener() {
@@ -202,9 +202,10 @@ public class register extends JFrame  {
                      row[1] = txtL.getText();
                      row[2] = txtUsername.getText();
                      row[3] = txtEmail.getText();
-                     row[4] = txtPassword.getPassword();		          
-                     row[5] = txtM.getText();
-                     row[6] = txtC.getText();
+                     row[4] = txtPassword.getPassword();
+                     row[5] = txtConfirmPassword.getPassword();
+                     row[6] = txtM.getText();
+                     row[7] = txtC.getText();
                      
                      // add row to the model
                      model.addRow(row);
@@ -229,7 +230,7 @@ public class register extends JFrame  {
 		                   txtUsername.setText(model.getValueAt(i, 2).toString());
 		                   txtEmail.setText(model.getValueAt(i, 3).toString());
 		                   txtPassword.setText(model.getValueAt(i,4).toString());
-		                   //txtConfirmPassword.setText(model.getValueAt(i,5).toString());
+		                   txtConfirmPassword.setText(model.getValueAt(i,5).toString());
 		                   txtM.setText(model.getValueAt(i, 6).toString());
 		                   txtC.setText(model.getValueAt(i, 7).toString());
 		               }
@@ -266,7 +267,7 @@ public class register extends JFrame  {
 		 }
 		        });
 
-		 JButton btnUpdate = new JButton("Update");   
+		 JButton btnUpdate = new JButton("Add");   
 		 btnUpdate.setBounds(220, 605, 89, 14);
 		 btnUpdate.setFont(new Font("Tohama", Font.BOLD, 20));
 		 btnUpdate.setSize(130,50);
@@ -287,15 +288,16 @@ public class register extends JFrame  {
 	                     row[1] = txtL.getText();
 	                     row[2] = txtUsername.getText();
 	                     row[3] = txtEmail.getText();
-	                     row[4] = txtPassword.getPassword();		          
-	                     row[5] = txtM.getText();
-	                     row[6] = txtC.getText();
+	                     row[4] = txtPassword.getPassword();	
+	                     row[5] = txtConfirmPassword.getPassword();	
+	                     row[6] = txtM.getText();
+	                     row[7] = txtC.getText();
 	                     
 	                     // add row to the model
 	                     model.addRow(row);
 	                }
 	                else{
-	                    System.out.println("Update Error");
+	                    System.out.println("Add Error");
 	                }
 	            }
 	        });
@@ -422,7 +424,7 @@ public class register extends JFrame  {
 	     g.setColor(Color.black);
 	     g.drawRect(50, 60, 490, 650); 
 	     g.setColor(Color.red);
-	     g.drawRect(565, 55, 805, 280); 
+	     g.drawRect(570, 60, 805, 283); 
 	     g.setColor(Color.red);
 	     g.drawRect(565, 365, 805, 350); 
 	     g.setColor(Color.black);
