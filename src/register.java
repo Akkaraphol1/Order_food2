@@ -60,7 +60,7 @@ public class register extends JFrame  {
 	       
 		JTable table = new JTable(); 
 
-		Object[] columns = {"First Name","Last Name","Username","Email","Password","Mobile Phone","Country or Religion"};
+		Object[] columns = {"First Name","Last Name","Username","Email","Confirm Password","Password","Mobile Phone","Country or Religion"};
 		        DefaultTableModel model = new DefaultTableModel();
 		        model.setColumnIdentifiers(columns);
 
